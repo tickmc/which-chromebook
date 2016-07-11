@@ -1,25 +1,7 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h1>What Can JavaScript Do?</h1>
-
-<p>JavaScript can change HTML attributes.</p>
-
-<p>In this case JavaScript changes the src (source) attribute of an image.</p>
-Form Factor:
-<form action="demo_form.asp" method="get">
-  <input type="checkbox" onclick="appear('.convertible');" name="convertibles" value="Convertibles">Convertibles<br>
-</form>
-
-OEM:
-<form action="demo_form.asp" method="get">
-  <input type="checkbox" onclick="appear('.acer'); disappear('.asuscheckbox');">Acer<br>
-  <input class="asuscheckbox" type="checkbox" onclick="appear('.asus')"><span class="asuscheckbox">Asus</span><br>
-</form>
-
-
-<script>
+  <head>
+  <script>
 
 function appear(selector) {
     var list = document.querySelectorAll(selector);
@@ -37,6 +19,28 @@ function disappear(selector) {
     }
 };
 </script>
+</head>
+<body>
+
+<h1>Which Chromebook Should you Buy?</h1>
+
+<p>Select the things you're looking for and devices that match those features will pop up!</p>
+
+<!-- ** So I've figured out how to make other irrelevant options disappear after you select one. For example, if I select "Acer" then "Asus" should no longer be an option because there is no Chromebook that is both built by Acer and Asus. HOWEVER I do not know how to make it reset when a checkbox is unchecked -->
+
+Form Factor:
+<form action="demo_form.asp" method="get">
+  <input type="checkbox" onclick="appear('.convertible');" name="convertibles" value="Convertibles">Convertibles<br>
+</form>
+
+OEM:
+<form action="demo_form.asp" method="get">
+  <input type="checkbox" onclick="appear('.acer'); disappear('.asuscheckbox');">Acer<br>
+  <input class="asuscheckbox" type="checkbox" onclick="appear('.asus')"><span class="asuscheckbox">Asus</span><br>
+</form>
+
+
+
 
 <img class="convertible acer" style="display:none;" src="http://whichchromebookshouldibuy.com/wp-content/uploads/2016/02/acer-r11-title.png" style="width:100px">
 <img class="convertible asus" style="display:none;" src="http://whichchromebookshouldibuy.com/wp-content/uploads/2016/02/asus-flip-title2.png" style="width:100px">
