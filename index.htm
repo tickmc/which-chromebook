@@ -10,7 +10,7 @@ function appear(selector) {
         
     }
 };
-I'm editing a document!
+
 function disappear(selector) {
     var list = document.querySelectorAll(selector);
     for (var i = 0; i < list.length; i++) {
@@ -29,12 +29,12 @@ function disappear(selector) {
 <!-- ** So I've figured out how to make other irrelevant options disappear after you select one. For example, if I select "Acer" then "Asus" should no longer be an option because there is no Chromebook that is both built by Acer and Asus. HOWEVER I do not know how to make it reset when a checkbox is unchecked -->
 
 Form Factor:
-<form action="demo_form.asp" method="get">
+<form action="#" method="get">
   <input type="checkbox" onclick="appear('.convertible');" name="convertibles" value="Convertibles">Convertibles<br>
 </form>
 
 OEM:
-<form action="demo_form.asp" method="get">
+<form action="#" method="get">
   <input type="checkbox" onclick="appear('.acer'); disappear('.asuscheckbox');">Acer<br>
   <input class="asuscheckbox" type="checkbox" onclick="appear('.asus')"><span class="asuscheckbox">Asus</span><br>
 </form>
